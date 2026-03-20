@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>STEM – Học Tập & Hướng Nghiệp Lớp 12</title>
+
+<style>
+:root{
+    --blue:#4facfe;
+    --purple:#8f94fb;
+    --green:#43e97b;
+}
+body{
+    margin:0;
+    font-family:'Segoe UI',Arial;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+}
+header{
+    padding:30px;
+    text-align:center;
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+}
+nav{
+    display:flex;
+    justify-content:center;
+    background:#0d47a1;
+}
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    padding:15px 25px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:600;
+}
+nav button:hover{background:#1976d2;}
+
+.section{
+    display:none;
+    padding:30px;
+    max-width:1200px;
+    margin:auto;
+}
+.section.active{display:block;}
+
+.card{
+    background:white;
+    color:#000;
+    border-radius:16px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+.card h2{color:#0d47a1;}
+
+.jobs{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.job{
+    background:linear-gradient(135deg,#1f1f1f,#2c2c2c);
+    padding:25px;
+    border-radius:18px;
+    cursor:pointer;
+    text-align:center;
+}
+.job:hover{
+    transform:translateY(-8px);
+    background:linear-gradient(135deg,var(--blue),var(--purple));
+}
+
+.box{
+    background:rgba(0,0,0,.4);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+}
+.choice{
+    width:80%;
+    margin:10px;
+    padding:14px;
+    border-radius:12px;
+    border:none;
+    background:linear-gradient(135deg,var(--green),#38f9d7);
+    cursor:pointer;
+}
+.back{
+    margin-top:10px;
+    padding:10px;
+}
+.result{
+    background:linear-gradient(135deg,#43e97b,#38f9d7);
+    color:#000;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0d47a1;
+}
+
+/* 🌌 vũ trụ nhẹ */
+.solar{
+    position:relative;
+    width:260px;
+    height:260px;
+    margin:20px auto;
+}
+.sun{
+    width:40px;
+    height:40px;
+    background:radial-gradient(circle,#fff176,#ff9800);
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.orbit{
+    position:absolute;
+    border:1px dashed rgba(0,0,0,0.2);
+    border-radius:50%;
+    animation:spin linear infinite;
+}
+.orbit1{width:90px;height:90px;top:85px;left:85px;animation:spin 6s linear infinite;}
+.orbit2{width:140px;height:140px;top:60px;left:60px;animation:spin 10s linear infinite;}
+.planet{
+    width:10px;height:10px;border-radius:50%;
+    position:absolute;top:-5px;left:50%;
+    transform:translateX(-50%);
+}
+.earth{background:#2196f3;}
+.mars{background:#e57373;}
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚀 STEM – HỌC TẬP & HƯỚNG NGHIỆP</h1>
+</header>
+
+<nav>
+<button onclick="showSection('study')">📘 Học tập</button>
+<button onclick="showSection('career')">🎓 Hướng nghiệp</button>
+</nav>
+
+<!-- ===== HỌC ===== -->
+<div id="study" class="section active">
+
+<!-- TOÁN -->
+<div class="card">
+<h2>➗ Toán</h2>
+<ul>
+<li><a href="https://toanmath.com" target="_blank">ToanMath</a></li>
+<li><a href="https://mathvn.com" target="_blank">MathVN</a></li>
+<li><a href="https://tuyensinh247.com/de-thi-thptqg-mon-toan-c31.html" target="_blank">Đề thi THPT & HSG</a></li>
+</ul>
+</div>
+
+<!-- LÝ -->
+<div class="card">
+<h2>⚡ Vật Lý</h2>
+<ul>
+<li><a href="https://vatly247.com" target="_blank">VatLy247</a></li>
+<li><a href="https://tuyensinh247.com/de-thi-thptqg-mon-ly-c32.html" target="_blank">Đề thi THPT & HSG</a></li>
+<li><a href="https://hocmai.vn/khoa-hoc/vat-ly" target="_blank">Hocmai Lý</a></li>
+</ul>
+</div>
+
+<!-- HÓA -->
+<div class="card">
+<h2>🧪 Hóa Học</h2>
+<ul>
+<li><a href="https://hoahoc247.com" target="_blank">HoaHoc247</a></li>
+<li><a href="https://tuyensinh247.com/de-thi-thptqg-mon-hoa-c33.html" target="_blank">Đề thi THPT & HSG</a></li>
+<li><a href="https://hocmai.vn/khoa-hoc/hoa-hoc" target="_blank">Hocmai Hóa</a></li>
+</ul>
+</div>
+
+<!-- 🌌 VŨ TRỤ -->
+<div class="card">
+<h2>🌌 Mô phỏng Hệ Mặt Trời</h2>
+<div class="solar">
+<div class="sun"></div>
+<div class="orbit orbit1"><div class="planet earth"></div></div>
+<div class="orbit orbit2"><div class="planet mars"></div></div>
+</div>
+</div>
+
+</div>
+
+<!-- ===== NGHỀ ===== -->
+<div id="career" class="section">
+<h2>🎓 Hướng nghiệp</h2>
+<div id="jobList" class="jobs"></div>
+<div id="game"></div>
+</div>
+
+<footer>
+<p>Nguyễn Hữu Nam - Vũ Thị Quyên- Nguyễn Lê Quốc Vương</p>
+</footer>
+
+<script>
+function showSection(id){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+function shuffle(a){
+for(let i=a.length-1;i>0;i--){
+let j=Math.floor(Math.random()*(i+1));
+[a[i],a[j]]=[a[j],a[i]];
+}
+}
+
+/* 50 nghề */
+let jobList=["Lập trình viên","Kỹ sư AI","Bác sĩ","Giáo viên","Bộ đội","Công an","Kỹ sư cơ khí","Kỹ sư điện","Kỹ sư xây dựng","Nhà khoa học","Phi hành gia","Dược sĩ","Luật sư","Kế toán","Marketing","Ngân hàng","Nhà báo","Kiến trúc sư","Thiết kế","Game Dev","Data Analyst","AI","An ninh mạng","Robot","Startup","Quản lý","HR","Sales","Logistics","E-commerce","Youtuber","Streamer","Nhiếp ảnh","Đạo diễn","Diễn viên","Ca sĩ","Nhạc sĩ","Nhà văn","Đầu bếp","Du lịch","Hướng dẫn viên","Môi trường","Hóa học","Vật lý","Sinh học","Nghiên cứu","Ô tô","Hàng không","CNSH","CNTT"];
+
+document.getElementById("jobList").innerHTML=
+jobList.map(j=>`<div class="job" onclick="startGame('${j}')">${j}</div>`).join("");
+
+/* 50 câu hỏi */
+let questions=["2x=10?","x²=9?","√16?","log₂8?","∫x dx?","(x³)'?","1+1?","5²?","10/2?","3×4?",
+"F=ma?","Ohm?","V=?","U=?","a=?","Q=?","p=?","g=?","I=?","E=?",
+"HCl?","NaOH?","H2O?","O2?","CO2?","pH<7?","pH>7?","NaCl?","CH4?","C2H5OH?",
+"Bạn thích công nghệ?","Bạn thích giúp người?","Bạn chịu áp lực?","Bạn thích sáng tạo?",
+"Bạn thích máy móc?","Bạn thích nghiên cứu?","Bạn thích nhóm?","Bạn thích tự do?",
+"Bạn thích toán?","Bạn thích dạy học?",
+"Bạn thích y?","Bạn thích kinh doanh?","Bạn thích nghệ thuật?",
+"Bạn thích khoa học?","Bạn thích code?","Bạn thích khám phá?",
+"Bạn thích quản lý?","Bạn thích giao tiếp?","Bạn thích độc lập?",
+"Bạn thích môi trường?"];
+
+let i=0,score=0,job="";
+
+function startGame(j){
+job=j;i=0;score=0;
+shuffle(questions);
+document.getElementById("jobList").style.display="none";
+next();
+}
+
+function next(){
+if(i<questions.length){
+document.getElementById("game").innerHTML=
+`<div class="box">
+<h3>${questions[i]}</h3>
+<button class="choice" onclick="answer(1)">Có / Đúng</button>
+<button class="choice" onclick="answer(0)">Không / Sai</button>
+<button class="back" onclick="location.reload()">⬅️ Quay lại</button>
+</div>`;
+}else{
+document.getElementById("game").innerHTML=
+`<div class="box result">
+<h2>${job}</h2>
+<p>${score}/50</p>
+</div>`;
+}
+}
+
+function answer(v){score+=v;i++;next();}
+</script>
+
+</body>
+</html>
